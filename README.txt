@@ -1,4 +1,4 @@
-MTI RFID ME HW GUI -- Oct 5, 2012
+MTI RFID ME HW GUI -- Sep 6, 2013
 Copyright (C) 2012 Microelectronics Technology Inc.
 
 MTI RFID ME HW GUI is a software to help people to evaluate MTI UHF RFID module and readers, including RFID ME USB Dongle (RU-888) reader and RU-888-000 module.
@@ -6,16 +6,16 @@ MTI RFID ME HW GUI is a software to help people to evaluate MTI UHF RFID module 
 Here includes the document as below.
 
 1. The source code of MTI RFID ME HW GUI (in Qt)
-	- under folder \MTI RFID ME QT GUI-v1.0.9
+	- under folder \MTI RFID ME QT GUI-v1.0.16
 
 2. The Reference Manual of MTI Low Level Command Set to control MTI UHF RFID module and reader.
-	- MTI RU-888 RFID Module Command Reference Manual v5.0.pdf
+	- MTI RU-888 RFID Module Command Reference Manual v5.1.pdf
 
 3. The user manual of RFID ME HW GUI
 	- MTI RFID ME HW GUI User Manual v1.1.pdf
 
 4. The installation file of MTI RFID ME HW GUI
-	- MTI RFID ME Setup v1.0.9.exe
+	- MTI RFID ME Setup v1.0.16.exe
 
 5. RFID ME License and Warranty Agreement to use the provided document.
 	- RFID ME License and Warranty Agreement Rev B 120629.pdf
