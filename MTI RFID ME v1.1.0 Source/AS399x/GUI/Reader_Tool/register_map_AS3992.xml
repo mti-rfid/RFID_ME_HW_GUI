@@ -1,0 +1,1276 @@
+<register_map editvalue="0" chip="AS3992">
+	<registers>
+		   <reg address="0" >
+            <name>Chip status control</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>TX and RX enable</b><br>RW<br>0<br>TX RF field and receiver are enabled.]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Receiver enable</b><br>RW<br>0<br>Receiver is enabled]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>AGC select</b><br>RW<br>0<br>0: AGC off<br>1: AGC on]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>AGL mode enable</b><br>RW<br>0<br>0: AGL off<br>1: AGL on]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>reserved</b><br>RW<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>DA converter enable</b><br>RW<br>0<br>0: DAC off<br>1: DAC on]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Direct mode</b><br>RW<br>0<br>External modulation control for transmission and IQ or bit stream output for reception]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Stand-by mode</b><br>RW<br>0<br>0: normal mode<br>1: stby mode]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="1" >
+            <name>Protocol control</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Tari (Gen2)/ TX bit rate (ISO B) selection</b><br>RW<br>10<br>00: Tari=6.25us (Gen2), 10/40kb/s (ISO B)<br>01: Tari=12.5us (Gen2), 40/40kb/s (ISO B)<br>10: Tari=25us (Gen2),]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Tari (Gen2)/ TX bit rate (ISO B) selection</b><br>RW<br>10<br>00: Tari=6.25us (Gen2), 10/40kb/s (ISO B)<br>01: Tari=12.5us (Gen2), 40/40kb/s (ISO B)<br>10: Tari=25us (Gen2),]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>RX decoding select (Gen2)</b><br>RW<br>01<br>00: FM0<br>01: Miller 2<br>10: Miller 4<br>11: Miller 8]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>RX decoding select (Gen2)</b><br>RW<br>01<br>00: FM0<br>01: Miller 2<br>10: Miller 4<br>11: Miller 8]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Protocol selection</b><br>RW<br>0<br>00: EPC Gen2<br>10: ISO18000-6 Type B direct mode decoder enable ]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Protocol selection</b><br>RW<br>0<br>00: EPC Gen2<br>10: ISO18000-6 Type B direct mode decoder enable ]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Direct mode type</b><br>RW<br>0<br>0: Output is bit stream and clock  from the selected decoder. 1: Output is sub-carrier data.]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Receiving without CRC</b><br>RW<br>0<br>0: RX CRC<br>1: No RX CRC]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="2" >
+            <name>TX options Gen2</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Session bits</b><br>RW<br>0<br>Used for Gen 2 direct commands.]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Session bits</b><br>RW<br>0<br>Used for Gen 2 direct commands.]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>TRcal period in normal transmission</b><br>RW<br>0<br>Normally TRcal is automatically transmitted when Query (98) direct command is issued, according to EPC Gen2 and ISO18000-6C. In case Force_TRcal=1 the TRcal period is transmitted also in normal data transmission (direct commands 90, 91)]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>TX CRC type </b><br>RW<br>0<br>0: CRC-16<br>1: CRC-5]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>TX one length control</b><br>RW<br>11<br>00: 1.50Tari<br>01: 1,66Tari<br>10: 1.83Tari<br>11: 2Tari]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>TX one length control</b><br>RW<br>11<br>00: 1.50Tari<br>01: 1,66Tari<br>10: 1.83Tari<br>11: 2Tari]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>PW length control</b><br>RW<br>11<br>00: 0.27Tari   i<br>10: 0.44Tari<br>01: 0.35Tar<br>11: 0.50Tari]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>PW length control</b><br>RW<br>11<br>00: 0.27Tari   i<br>10: 0.44Tari<br>01: 0.35Tar<br>11: 0.50Tari]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="3" >
+            <name>RX options Gen 2</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>reserved for further use]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>RX preamble length</b><br>RW<br>0<br>0: Short preamble             1: long preamble<br>Short preamble is supported for Miller 4 and Miller 8 coding.]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Shorter pilot measurement  </b><br>RW<br>00<br>Shorten pilot measurement interval to 1/2, 1/4, 1/8. Available intervals are 80, 40, 20, 10, 5 LF periods.]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Shorter pilot measurement  </b><br>RW<br>00<br>Shorten pilot measurement interval to 1/2, 1/4, 1/8. Available intervals are 80, 40, 20, 10, 5 LF periods.]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Link frequency selection</b><br>RW<br>0110<br>0000: 40kHz<br>0110: 160kHz<br>1001: 256kHz<br>1100: 320kHz<br>1111: 640kHz]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Link frequency selection</b><br>RW<br>0110<br>0000: 40kHz<br>0110: 160kHz<br>1001: 256kHz<br>1100: 320kHz<br>1111: 640kHz]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Link frequency selection</b><br>RW<br>0110<br>0000: 40kHz<br>0110: 160kHz<br>1001: 256kHz<br>1100: 320kHz<br>1111: 640kHz]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Link frequency selection</b><br>RW<br>0110<br>0000: 40kHz<br>0110: 160kHz<br>1001: 256kHz<br>1100: 320kHz<br>1111: 640kHz]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="4" >
+            <name>TRcal low register Gen2</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00110101<br>Gen2: 17.2us .. 225us<br>TRcal range 0.1us .. 409us (1 .. 4096 steps)<br>step size 0.1us<br>worst case relative resolution (0.1us/17.2us=0.6%)]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00110101<br>Gen2: 17.2us .. 225us<br>TRcal range 0.1us .. 409us (1 .. 4096 steps)<br>step size 0.1us<br>worst case relative resolution (0.1us/17.2us=0.6%)]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00110101<br>Gen2: 17.2us .. 225us<br>TRcal range 0.1us .. 409us (1 .. 4096 steps)<br>step size 0.1us<br>worst case relative resolution (0.1us/17.2us=0.6%)]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00110101<br>Gen2: 17.2us .. 225us<br>TRcal range 0.1us .. 409us (1 .. 4096 steps)<br>step size 0.1us<br>worst case relative resolution (0.1us/17.2us=0.6%)]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00110101<br>Gen2: 17.2us .. 225us<br>TRcal range 0.1us .. 409us (1 .. 4096 steps)<br>step size 0.1us<br>worst case relative resolution (0.1us/17.2us=0.6%)]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00110101<br>Gen2: 17.2us .. 225us<br>TRcal range 0.1us .. 409us (1 .. 4096 steps)<br>step size 0.1us<br>worst case relative resolution (0.1us/17.2us=0.6%)]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00110101<br>Gen2: 17.2us .. 225us<br>TRcal range 0.1us .. 409us (1 .. 4096 steps)<br>step size 0.1us<br>worst case relative resolution (0.1us/17.2us=0.6%)]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00110101<br>Gen2: 17.2us .. 225us<br>TRcal range 0.1us .. 409us (1 .. 4096 steps)<br>step size 0.1us<br>worst case relative resolution (0.1us/17.2us=0.6%)]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="5" >
+            <name>TRcal high and misc register Gen2</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>101<br>remaining Bit of Trcal Description at register 04 ]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>101<br>remaining Bit of Trcal Description at register 04 ]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>101<br>remaining Bit of Trcal Description at register 04 ]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>101<br>remaining Bit of Trcal Description at register 04 ]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Open drain N-MOS outputs</b><br>RW<br>0<br>Valid for CLSYS, OAD, OAD2 pins]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Support low peripheral communication voltage</b><br>RW<br>0<br>When high decreases output resistance of logic outputs. Should be set high when VDD_IO voltage is below 2.7V.]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Decrease VDD_MIX</b><br>RW<br>0<br>0: 4.8V<br>1: 3.7V]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>RX gain direction </b><br>RW<br>0<br>0: Decrease<br>]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="6" >
+            <name>Delayed transmission wait time </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Delayed transmission wait time</b><br>RW<br>0<br>TX reply range 6.4us to 1632us (1..255), Start at end of RX.<br>00: Delayed transmission is disabled.<br>Gen2: T2=4.68us .. 500us after end of RX,<br>Select T4 larger than 31.2 .. 150us after end of TX<br>ISO-B: larger than 400us before TX preamble]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Delayed transmission wait time</b><br>RW<br>0<br>TX reply range 6.4us to 1632us (1..255), Start at end of RX.<br>00: Delayed transmission is disabled.<br>Gen2: T2=4.68us .. 500us after end of RX,<br>Select T4 larger than 31.2 .. 150us after end of TX<br>ISO-B: larger than 400us before TX preamble]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Delayed transmission wait time</b><br>RW<br>0<br>TX reply range 6.4us to 1632us (1..255), Start at end of RX.<br>00: Delayed transmission is disabled.<br>Gen2: T2=4.68us .. 500us after end of RX,<br>Select T4 larger than 31.2 .. 150us after end of TX<br>ISO-B: larger than 400us before TX preamble]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Delayed transmission wait time</b><br>RW<br>0<br>TX reply range 6.4us to 1632us (1..255), Start at end of RX.<br>00: Delayed transmission is disabled.<br>Gen2: T2=4.68us .. 500us after end of RX,<br>Select T4 larger than 31.2 .. 150us after end of TX<br>ISO-B: larger than 400us before TX preamble]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Delayed transmission wait time</b><br>RW<br>0<br>TX reply range 6.4us to 1632us (1..255), Start at end of RX.<br>00: Delayed transmission is disabled.<br>Gen2: T2=4.68us .. 500us after end of RX,<br>Select T4 larger than 31.2 .. 150us after end of TX<br>ISO-B: larger than 400us before TX preamble]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Delayed transmission wait time</b><br>RW<br>0<br>TX reply range 6.4us to 1632us (1..255), Start at end of RX.<br>00: Delayed transmission is disabled.<br>Gen2: T2=4.68us .. 500us after end of RX,<br>Select T4 larger than 31.2 .. 150us after end of TX<br>ISO-B: larger than 400us before TX preamble]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Delayed transmission wait time</b><br>RW<br>0<br>TX reply range 6.4us to 1632us (1..255), Start at end of RX.<br>00: Delayed transmission is disabled.<br>Gen2: T2=4.68us .. 500us after end of RX,<br>Select T4 larger than 31.2 .. 150us after end of TX<br>ISO-B: larger than 400us before TX preamble]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Delayed transmission wait time</b><br>RW<br>0<br>TX reply range 6.4us to 1632us (1..255), Start at end of RX.<br>00: Delayed transmission is disabled.<br>Gen2: T2=4.68us .. 500us after end of RX,<br>Select T4 larger than 31.2 .. 150us after end of TX<br>ISO-B: larger than 400us before TX preamble]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="7" >
+            <name>RX No response wait time </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>No response wait time.</b><br>RW<br>00000111<br>Defines the time after the no response interrupt is sent. It starts from the end of TX.<br>RX no response wait range is 25.6us to 6528us (1..255),<br>Step size 25.6us.<br>Interrupt is sent in case the time runs out before 6-10 periods of link frequency is detected.<br>Gen2: T1max=23.6us ..  262us.]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>No response wait time.</b><br>RW<br>00000111<br>Defines the time after the no response interrupt is sent. It starts from the end of TX.<br>RX no response wait range is 25.6us to 6528us (1..255),<br>Step size 25.6us.<br>Interrupt is sent in case the time runs out before 6-10 periods of link frequency is detected.<br>Gen2: T1max=23.6us ..  262us.]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>No response wait time.</b><br>RW<br>00000111<br>Defines the time after the no response interrupt is sent. It starts from the end of TX.<br>RX no response wait range is 25.6us to 6528us (1..255),<br>Step size 25.6us.<br>Interrupt is sent in case the time runs out before 6-10 periods of link frequency is detected.<br>Gen2: T1max=23.6us ..  262us.]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>No response wait time.</b><br>RW<br>00000111<br>Defines the time after the no response interrupt is sent. It starts from the end of TX.<br>RX no response wait range is 25.6us to 6528us (1..255),<br>Step size 25.6us.<br>Interrupt is sent in case the time runs out before 6-10 periods of link frequency is detected.<br>Gen2: T1max=23.6us ..  262us.]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>No response wait time.</b><br>RW<br>00000111<br>Defines the time after the no response interrupt is sent. It starts from the end of TX.<br>RX no response wait range is 25.6us to 6528us (1..255),<br>Step size 25.6us.<br>Interrupt is sent in case the time runs out before 6-10 periods of link frequency is detected.<br>Gen2: T1max=23.6us ..  262us.]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>No response wait time.</b><br>RW<br>00000111<br>Defines the time after the no response interrupt is sent. It starts from the end of TX.<br>RX no response wait range is 25.6us to 6528us (1..255),<br>Step size 25.6us.<br>Interrupt is sent in case the time runs out before 6-10 periods of link frequency is detected.<br>Gen2: T1max=23.6us ..  262us.]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>No response wait time.</b><br>RW<br>00000111<br>Defines the time after the no response interrupt is sent. It starts from the end of TX.<br>RX no response wait range is 25.6us to 6528us (1..255),<br>Step size 25.6us.<br>Interrupt is sent in case the time runs out before 6-10 periods of link frequency is detected.<br>Gen2: T1max=23.6us ..  262us.]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>No response wait time.</b><br>RW<br>00000111<br>Defines the time after the no response interrupt is sent. It starts from the end of TX.<br>RX no response wait range is 25.6us to 6528us (1..255),<br>Step size 25.6us.<br>Interrupt is sent in case the time runs out before 6-10 periods of link frequency is detected.<br>Gen2: T1max=23.6us ..  262us.]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="8" >
+            <name>RX wait time </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>RX wait time</b><br>RW<br>00000111<br>Defines the time during which the RX input is ignored. It starts from the end of TX.<br>RX wait range is 6.4us to 1632us (1..255),<br>Step size 6.4us,<br>00: receiver enabled immediately after TX.<br>Gen2: T1min=11.28us .. 262us,<br>ISOA: 150 .. 1150us<br>ISOB: 85 .. 460us]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>RX wait time</b><br>RW<br>00000111<br>Defines the time during which the RX input is ignored. It starts from the end of TX.<br>RX wait range is 6.4us to 1632us (1..255),<br>Step size 6.4us,<br>00: receiver enabled immediately after TX.<br>Gen2: T1min=11.28us .. 262us,<br>ISOA: 150 .. 1150us<br>ISOB: 85 .. 460us]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>RX wait time</b><br>RW<br>00000111<br>Defines the time during which the RX input is ignored. It starts from the end of TX.<br>RX wait range is 6.4us to 1632us (1..255),<br>Step size 6.4us,<br>00: receiver enabled immediately after TX.<br>Gen2: T1min=11.28us .. 262us,<br>ISOA: 150 .. 1150us<br>ISOB: 85 .. 460us]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>RX wait time</b><br>RW<br>00000111<br>Defines the time during which the RX input is ignored. It starts from the end of TX.<br>RX wait range is 6.4us to 1632us (1..255),<br>Step size 6.4us,<br>00: receiver enabled immediately after TX.<br>Gen2: T1min=11.28us .. 262us,<br>ISOA: 150 .. 1150us<br>ISOB: 85 .. 460us]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>RX wait time</b><br>RW<br>00000111<br>Defines the time during which the RX input is ignored. It starts from the end of TX.<br>RX wait range is 6.4us to 1632us (1..255),<br>Step size 6.4us,<br>00: receiver enabled immediately after TX.<br>Gen2: T1min=11.28us .. 262us,<br>ISOA: 150 .. 1150us<br>ISOB: 85 .. 460us]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>RX wait time</b><br>RW<br>00000111<br>Defines the time during which the RX input is ignored. It starts from the end of TX.<br>RX wait range is 6.4us to 1632us (1..255),<br>Step size 6.4us,<br>00: receiver enabled immediately after TX.<br>Gen2: T1min=11.28us .. 262us,<br>ISOA: 150 .. 1150us<br>ISOB: 85 .. 460us]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>RX wait time</b><br>RW<br>00000111<br>Defines the time during which the RX input is ignored. It starts from the end of TX.<br>RX wait range is 6.4us to 1632us (1..255),<br>Step size 6.4us,<br>00: receiver enabled immediately after TX.<br>Gen2: T1min=11.28us .. 262us,<br>ISOA: 150 .. 1150us<br>ISOB: 85 .. 460us]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>RX wait time</b><br>RW<br>00000111<br>Defines the time during which the RX input is ignored. It starts from the end of TX.<br>RX wait range is 6.4us to 1632us (1..255),<br>Step size 6.4us,<br>00: receiver enabled immediately after TX.<br>Gen2: T1min=11.28us .. 262us,<br>ISOA: 150 .. 1150us<br>ISOB: 85 .. 460us]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="9" >
+            <name>RX filter </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>High pass setting</b><br>RW<br>01<br>See details in the Filter description section.]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>High pass setting</b><br>RW<br>01<br>See details in the Filter description section.]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>High pass setting</b><br>RW<br>01<br>See details in the Filter description section.]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Low pass setting</b><br>RW<br>0<br>See details in the Filter description section.]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Low pass setting</b><br>RW<br>0<br>See details in the Filter description section.]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Low pass setting</b><br>RW<br>0<br>See details in the Filter description section.]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Bypass for 40kHz LF</b><br>RW<br>1<br>Will be used to enable 40 kHZ Linkfrequency at FM0 and M2]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Bypass for 160kHz LF</b><br>RW<br>0<br>Will be used to enable 160 kHZ Linkfrequency at FM0 and M2]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="10" >
+            <name>RX special setting2 </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Mixer input attenuation</b><br>RW<br>1<br>8dB attenuation using diff. mixer,<br>5dB attenuation using single ended input mixer]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Differential mixer gain increase  </b><br>RW<br>0<br>10dB gain increase (v5)]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Mixer input selection</b><br>RW<br>0<br>0: differential input mixer<br>1: single ended input mixer]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Digitizer hysteresis setting</b><br>RW<br>0<br>Hysteresis increase, 7 steps by 3dB]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Digitizer hysteresis setting</b><br>RW<br>0<br>Hysteresis increase, 7 steps by 3dB]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Digitizer hysteresis setting</b><br>RW<br>0<br>Hysteresis increase, 7 steps by 3dB]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>RX gain setting</b><br>RW<br>0<br>Gain change, 3 steps by 3dB, Increase/decrease defined by gain&lt;3&gt; option bit in reg05]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>RX gain setting</b><br>RW<br>0<br>Gain change, 3 steps by 3dB, Increase/decrease defined by gain&lt;3&gt; option bit in reg05]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="11" >
+            <name>Regulator and IO control </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Enable for low power output and current for auxiliary driver low power output</b><br>RW<br>10<br>00: disabled<br>10: 14mA</b><br>11: 22mA]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Enable for low power output and current for auxiliary driver low power output</b><br>RW<br>10<br>00: disabled<br>10: 14mA</b><br>11: 22mA]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Enable for main PA and current for main PA pre-driver</b><br>RW<br>00<br>00: disabled<br>10: 14mA</b><br>11: 22mA<br>]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Enable for main PA and current for main PA pre-driver</b><br>RW<br>00<br>00: disabled<br>10: 14mA</b><br>11: 22mA<br>]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>PA2 enable</b><br>RW<br>0<br>0: RFOUT1 only<br>1: differential RFOUT1 and RFOUT2]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Internal power amplifier regulator setting</b><br>RW<br>00<br>00: 2V<br>01: 2.5V<br>10: 3V<br>11: 3.5V]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Internal power amplifier regulator setting</b><br>RW<br>00<br>00: 2V<br>01: 2.5V<br>10: 3V<br>11: 3.5V]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>rfu</b><br>RW<br>0<br>reserved]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="12" >
+            <name>IRQ and status register </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>No response interrupt</b><br>R<br>0<br>Signals to MCU that next slot command can be sent]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>Preamble detect error /RX finished</b><br>R<br>0<br>Signals to MCU that there was an error during preamble detection /<br>Rx is finished   in case fifo_dir_irq2=1(reg1A)  v3.7]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>RX count error</b><br>R<br>0<br>Signals to MCU that reception was shorter than expected (see RX length (1A, 1B) register definition)]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>Header bit / 2 bytes</b><br>R<br>0<br>Received header bit is high /Two bytes already in FIFO  in case fifo_dir_irq2=1(reg1A)  ]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>CRC error</b><br>R<br>0<br>Reception CRC]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>Signals the FIFO is 2/3 full or FIFO  less than 1/3</b><br>R<br>0<br>Signals FIFO high or low ]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>IRQ set due to RX start</b><br>R<br>0<br>Signals the RX was received and RX is in progress. Interrupt when RX is finished.]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>IRQ set due to end of TX</b><br>R<br>0<br>Signals the TX is in progress. Interrupt when TX is finished.]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="13" >
+            <name>Interrupt mask register </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>Bit 0</b><br>RW<br>1<br>When enabled the interrupt also interrupts the receive operation.]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>Bit 1</b><br>RW<br>1<br>See status register for description]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>Bit2</b><br>RW<br>1<br>See status register for description]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>Bit 3</b><br>RW<br>1<br>See status register for description]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>Bit 4</b><br>RW<br>1<br>See status register for description]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>Bit 5</b><br>RW<br>1<br>See status register for description]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>Bit 6</b><br>RW<br>0<br>rfu]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>Bit 7</b><br>RW<br>0<br>rfu]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="14" >
+            <name>AGC and Internal status register </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>Crystal oscillator stable</b><br>R<br>0]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>PLL locked</b><br>R<br>0]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>RF level stable</b><br>R<br>0]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>Shows the source of the subcarrier signal that is used for decoding</b><br>R<br>0<br>0: REC_A, 1:REC_B. Value is valid from reception start till start of next transmission]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>AGC status</b><br>R<br>0<br>(7 steps, 3dB per step)]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>AGC status</b><br>R<br>0<br>(7 steps, 3dB per step)]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>AGC status</b><br>R<br>0<br>(7 steps, 3dB per step)]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>AGC status</b><br>R<br>0]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="15" >
+            <name>RSSI levels register </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>RSSI value of I channel (REC_A)</b><br>R<br>0<br>(16 steps, 2dB per step)]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>RSSI value of I channel (REC_A)</b><br>R<br>0<br>(16 steps, 2dB per step)]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>RSSI value of I channel (REC_A)</b><br>R<br>0<br>(16 steps, 2dB per step)]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>RSSI value of I channel (REC_A)</b><br>R<br>0<br>(16 steps, 2dB per step)]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>RSSI value of Q channel(REC_B)</b><br>R<br>0<br>(16 steps, 2dB per step)]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>RSSI value of Q channel(REC_B)</b><br>R<br>0<br>(16 steps, 2dB per step)]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>RSSI value of Q channel(REC_B)</b><br>R<br>0<br>(16 steps, 2dB per step)]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>RSSI value of Q channel(REC_B)</b><br>R<br>0<br>(16 steps, 2dB per step)]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="16" >
+            <name>AGL/VCO/F_CAL/PilotFreq status register </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>AGL status - REC_B.</b><br>R<br>000<br>7 steps, 3dB per step]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>AGL status - REC_B.</b><br>R<br>000<br>7 steps, 3dB per step]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>AGL status - REC_B.</b><br>R<br>000<br>7 steps, 3dB per step]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>AGL status</b><br>- REC_A.<br>R<br>7 steps, 3dB per step]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>AGL status</b><br>- REC_A.<br>R<br>7 steps, 3dB per step]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>AGL status</b><br>- REC_A.<br>R<br>7 steps, 3dB per step]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>R<br>0]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>R<br>0<br>reserved for further use]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+
+        <reg address="17" >
+            <name>Measurement selection </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>ADC measurement selection</b><br>RW<br>000<br>000: None<br>001: Rec. A mixer DC<br>010: Rec. B mixer DC level<br>011: ADC pin<br>100: Internal RF level<br>11 0<br>111: VEXT level]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>ADC measurement selection</b><br>RW<br>000<br>000: None<br>001: Rec. A mixer DC<br>010: Rec. B mixer DC level<br>011: ADC pin<br>100: Internal RF level<br>11 0<br>111: VEXT level]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>ADC measurement selection</b><br>RW<br>000<br>000: None<br>001: Rec. A mixer DC<br>010: Rec. B mixer DC level<br>011: ADC pin<br>100: Internal RF level<br>11 0<br>111: VEXT level]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>reserved for further use]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>reserved for further use]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>reserved for further use]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>reserved for further use]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>reserved for further use]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+
+
+
+<reg address="18-2">
+<name>Test setting </name>
+<tooltip/>
+      <control addmask="8">
+       <ctrlregister>0</ctrlregister>
+       <ctrlbits>0:2</ctrlbits>
+       </control>
+            <bits>
+                <bit no="0" ro="1">
+                    <tooltip><![CDATA[<b>Page reg10 selection extension (v5)</b><br>RW<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>Decoder test speed-up (v5)</b><br>RW<br>0<br>Bit moved for v5, low for normal operation.]]></tooltip>
+                </bit>
+                <bit no="2" ro="1">
+                    <tooltip><![CDATA[<b>Analogue tests</b><br>RW<br>000<br>For test purposes only. Should be low for normal operation.]]></tooltip>
+                </bit>
+                <bit no="3" ro="1">
+                    <tooltip><![CDATA[<b>Analogue tests</b><br>RW<br>000<br>For test purposes only. Should be low for normal operation.]]></tooltip>
+                </bit>
+                <bit no="4" ro="1">
+                    <tooltip><![CDATA[<b>Analogue tests</b><br>RW<br>000<br>For test purposes only. Should be low for normal operation.]]></tooltip>
+                </bit>
+                <bit no="5" ro="1">
+                    <tooltip><![CDATA[<b>Analogue tests</b><br>RW<br>000<br>For test purposes only. Should be low for normal operation.]]></tooltip>
+                </bit>
+                <bit no="6" ro="1">
+                    <tooltip><![CDATA[<b>Analogue tests</b><br>RW<br>000<br>For test purposes only. Should be low for normal operation.]]></tooltip>
+                </bit>
+                <bit no="7" ro="1">
+                    <tooltip><![CDATA[<b>Analogue tests</b><br>RW<br>000<br>For test purposes only. Should be low for normal operation.]]></tooltip>
+                </bit>
+            </bits>
+		</reg>
+    <reg address="18-1">
+      <name>Test setting </name>
+      <tooltip/>
+      <control addmask="8">
+      <ctrlregister>0</ctrlregister>
+      <ctrlbits>0:2</ctrlbits>
+      </control>
+            <bits>
+                <bit no="0" ro="1">
+                    <tooltip><![CDATA[<b>Miller decoder mode</b><br>RW<br>0<br>v5.0 - set to 1 for correct operation<br>   - RFU]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0]]></tooltip>
+                </bit>
+                <bit no="2" ro="1">
+                    <tooltip><![CDATA[<b>RX settling speed up (v5)</b><br>RW<br>0<br>v5: First stage AC coupling speed-up<br>(2x, in v3 it was  fl&lt;4&gt; in reg09)]]></tooltip>
+                </bit>
+                <bit no="3" ro="1">
+                    <tooltip><![CDATA[<b>Change the RX filter calibration (v5)</b><br>RW<br>0<br>v5: 1: enables changing of hp cal. with 89 and 8A.<br>0: enables changing of lp cal. Result in reg10.]]></tooltip>
+                </bit>
+                <bit no="4" ro="1">
+                    <tooltip><![CDATA[<b>AGC mode type</b><br>RW<br>0]]></tooltip>
+                </bit>
+                <bit no="5" ro="1">
+                    <tooltip><![CDATA[<b>RSSI continuous</b><br>RW<br>0<br>For test purposes only. Should be low for normal operation.]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>Page reg10 selection</b><br>RW<br>00<br>]]></tooltip>
+                </bit>
+                <bit no="7" ro="1">
+                    <tooltip><![CDATA[<b>Page reg10 selection</b><br>RW<br>00<br>]]></tooltip>
+                </bit>
+            </bits>
+    </reg>
+
+
+
+    <reg address="18-0">
+      <name>Test setting </name>
+      <tooltip/>
+      <control addmask="8">
+        <ctrlregister>0</ctrlregister>
+        <ctrlbits>0:2</ctrlbits>
+      </control>
+            <bits>
+                <bit no="0" ro="1">
+                    <tooltip><![CDATA[<b>Additional test selection</b><br>RW<br>0<br>For test purposes only. Should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>Additional test selection</b><br>RW<br>0<br>For test purposes only. Should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Prescaler test</b><br>RW<br>0<br>For test purposes only. Should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Subcarrier output</b><br>RW<br>0<br>For test purposes only. Should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="4" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>For test purposes only. Should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="5" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>For test purposes only. Should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="6" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0<br>For test purposes only. Should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="7" ro="1">
+                    <tooltip><![CDATA[<b>Miller decoder mode</b><br>RW<br>0<br>v5.0 - set to 1 for correct operation<br>   - set to 0 for correct operation]]></tooltip>
+                </bit>
+            </bits>
+    </reg>
+
+
+        <reg address="19" >
+            <name>Version register</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>chip version ( R) and Pre-distortion shape (Write)</b><br>R<br>Hex51<br>38: AS3991<br>51: AS3992 ]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>chip version ( R) and Pre-distortion shape (Write)</b><br>R<br>Hex51<br>38: AS3991<br>51: AS3992 ]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>chip version ( R) and Pre-distortion shape (Write)</b><br>R<br>Hex51<br>38: AS3991<br>51: AS3992 ]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>chip version ( R) and Pre-distortion shape (Write)</b><br>R<br>Hex51<br>38: AS3991<br>51: AS3992 ]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>chip version ( R) and Pre-distortion shape (Write)</b><br>R<br>Hex51<br>38: AS3991<br>51: AS3992 ]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>chip version ( R) and Pre-distortion shape (Write)</b><br>R<br>Hex51<br>38: AS3991<br>51: AS3992 ]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>chip version ( R) and Pre-distortion shape (Write)</b><br>R<br>Hex51<br>38: AS3991<br>51: AS3992 ]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>chip version ( R) and Pre-distortion shape (Write)</b><br>R<br>Hex51<br>38: AS3991<br>51: AS3992 ]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+
+
+
+        <reg address="20-2" >
+            <name>CL_SYS, analogue out and CP control</name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Manual VCO range selection  </b><br>RW<br>0<br>Manual selection of the VCO range segment. Used in case auto=0 -   ]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Manual VCO range selection  </b><br>RW<br>0<br>Manual selection of the VCO range segment. Used in case auto=0 -   ]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Manual VCO range selection  </b><br>RW<br>0<br>Manual selection of the VCO range segment. Used in case auto=0 -   ]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>Manual VCO range selection  </b><br>RW<br>0<br>Manual selection of the VCO range segment. Used in case auto=0 -   ]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>rfu</b><br>RW<br>0<br>cp&lt;4&gt;  disable ½ cp out  test, should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>rfu</b><br>RW<br>0<br>temporary eosc&lt;0&gt;]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Crystal oscillator adaptation (v5)</b><br>RW<br>00<br>00  normal operation with auto power saving mode<br>01  External sinus TCXO AC coupled to OSCO<br>10  Disable auto power saving mode]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Crystal oscillator adaptation (v5)</b><br>RW<br>00<br>00  normal operation with auto power saving mode<br>01  External sinus TCXO AC coupled to OSCO<br>10  Disable auto power saving mode]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="20-1" >
+            <name>CL_SYS, analogue out and CP control </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>CLSYS output frequency</b><br>RW<br>0<br>000: Off<br>001: 5MHz<br>010: 10MHz<br>011: 20MHz<br>100: 4MHz -    only]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Internal oscillator bias current</b><br>RW<br>10<br>00: min. bias current (~1.3mA)    <br>11: max. bias current (~5mA)    ]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Internal oscillator bias current</b><br>RW<br>10<br>00: min. bias current (~1.3mA)    <br>11: max. bias current (~5mA)    ]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>VCO measurement enable  </b><br>RW<br>0<br>7 steps, result in reg10 -   ]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Auto range selection mode  </b><br>RW<br>0]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>0]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Auto range selection speed-up  </b><br>RW<br>0]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Automatic VCO range enable  </b><br>RW<br>0<br>L-H transition triggers the automatic selection of the VCO range segment -   .]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="20-0" >
+            <name>CL_SYS, analogue out and CP control </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>Charge pump current  </b><br>RW<br>000<br>000: 150mA<br>001: 300mA<br>010: 600mA<br>011: 1200mA<br>100: 1350mA<br>101: 1500mA<br>110: 1800mA<br>111: 2350mA]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>Charge pump current  </b><br>RW<br>000<br>000: 150mA<br>001: 300mA<br>010: 600mA<br>011: 1200mA<br>100: 1350mA<br>101: 1500mA<br>110: 1800mA<br>111: 2350mA]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Charge pump current  </b><br>RW<br>000<br>000: 150mA<br>001: 300mA<br>010: 600mA<br>011: 1200mA<br>100: 1350mA<br>101: 1500mA<br>110: 1800mA<br>111: 2350mA]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>VCO frequency dependence</b><br>RW<br>1<br>0: increasing with VCO voltage<br>1: decreasing with VCO voltage]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Analogue sub-carrier out on OAD/OAD2</b><br>RW<br>0]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Analogue mixer DC output on OAD/OAD2</b><br>RW<br>0]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>CLSYS output frequency</b><br>RW<br>000<br>000: Off<br>001: 5MHz<br>010: 10MHz<br>011: 20MHz<br>100: 4MHz -    only]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>CLSYS output frequency</b><br>RW<br>000<br>000: Off<br>001: 5MHz<br>010: 10MHz<br>011: 20MHz<br>100: 4MHz -    only]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="21-2" >
+            <name>Modulator control register </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>ASK Modulation transient</b><br>rate<br>RW<br>00: Tari determined<br>01: Skip 2<br>10: Skip 4<br>11: Skip 8]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>ASK Modulation transient</b><br>rate<br>RW<br>00: Tari determined<br>01: Skip 2<br>10: Skip 4<br>11: Skip 8]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>Enable low pass filter</b><br>RW<br>0]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>TX pre-distortion</b><br>enable  <br>RW]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Test bit</b><br>RW<br>0<br>Should be low for normal operation]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Modulation connected to aux. TX</b><br>RW<br>1<br>]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>Modulation connected to main TX</b><br>RW<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Analogue modulation</b><br>RW<br>0<br>0: IO3 is digital modulation input in direct mode<br>1: ADC, DAC are differential analogue mod. input in direct mode (allowed when ADC not used)]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="21-1" >
+            <name>Modulator control register </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>ASK modulation depth/PR delimiter adjust</b><br>RW<br>1F<br>in case pr_ask=0 and ook_ask=0:<br>00?3E: ASK modulation depth, 3F: 100%,<br>in case pr_ask=1 or ook_ask=1:<br>adjust delimiter length, range 9.6ms to 15.9ms, step 0.1ms. 1D=12.5ms]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>ASK modulation depth/PR delimiter adjust</b><br>RW<br>1F<br>in case pr_ask=0 and ook_ask=0:<br>00?3E: ASK modulation depth, 3F: 100%,<br>in case pr_ask=1 or ook_ask=1:<br>adjust delimiter length, range 9.6ms to 15.9ms, step 0.1ms. 1D=12.5ms]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>ASK modulation depth/PR delimiter adjust</b><br>RW<br>1F<br>in case pr_ask=0 and ook_ask=0:<br>00?3E: ASK modulation depth, 3F: 100%,<br>in case pr_ask=1 or ook_ask=1:<br>adjust delimiter length, range 9.6ms to 15.9ms, step 0.1ms. 1D=12.5ms]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>ASK modulation depth/PR delimiter adjust</b><br>RW<br>1F<br>in case pr_ask=0 and ook_ask=0:<br>00?3E: ASK modulation depth, 3F: 100%,<br>in case pr_ask=1 or ook_ask=1:<br>adjust delimiter length, range 9.6ms to 15.9ms, step 0.1ms. 1D=12.5ms]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>ASK modulation depth/PR delimiter adjust</b><br>RW<br>1F<br>in case pr_ask=0 and ook_ask=0:<br>00?3E: ASK modulation depth, 3F: 100%,<br>in case pr_ask=1 or ook_ask=1:<br>adjust delimiter length, range 9.6ms to 15.9ms, step 0.1ms. 1D=12.5ms]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>ASK modulation depth/PR delimiter adjust</b><br>RW<br>1F<br>in case pr_ask=0 and ook_ask=0:<br>00?3E: ASK modulation depth, 3F: 100%,<br>in case pr_ask=1 or ook_ask=1:<br>adjust delimiter length, range 9.6ms to 15.9ms, step 0.1ms. 1D=12.5ms]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>PR-ASK enable</b><br>RW<br>1<br>In case Tari is 25us the ook_ask bit defines delimiter transient in PRASK modulation mode: ook_ask=1 forces ASK shaped transient, ook_ask=0 forces PRASK shaped transient. In case Tari is 12.5us or 6.25us the ASK delimiter transient is used regardless ook_ask bit value.<br>ASK shaped delimiter transient offers correct and adjustable delimiter length. The TX spectrum is not affected to a visible level due to ASK delimiter transient. Other field transitions are done in PRASK mode.]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Selects linear modulation transient</b><br>RW<br>0<br>Default is shaped modulation transient for ASK and PR-ASK modulation.]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="21-0" >
+            <name>Modulator control register </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" >
+                    <tooltip><![CDATA[<b>TX output level fine adjustment</b><br>RW<br>0<br>0: nominal, decrease: 1?7: -1dB...-7dB, step 1dB]]></tooltip>
+                </bit>
+                <bit no="1" >
+                    <tooltip><![CDATA[<b>TX output level fine adjustment</b><br>RW<br>0<br>0: nominal, decrease: 1?7: -1dB...-7dB, step 1dB]]></tooltip>
+                </bit>
+                <bit no="2" >
+                    <tooltip><![CDATA[<b>TX output level fine adjustment</b><br>RW<br>0<br>0: nominal, decrease: 1?7: -1dB...-7dB, step 1dB]]></tooltip>
+                </bit>
+                <bit no="3" >
+                    <tooltip><![CDATA[<b>TX output level coarse adjustment</b><br>RW<br>0<br>00: 0dB, nominal<br>10: -12dB<br>11: RFU<br>01: -6dB]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>TX output level coarse adjustment</b><br>RW<br>0<br>00: 0dB, nominal<br>10: -12dB<br>11: RFU<br>01: -6dB]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>100% ASK enable with variable delimiter length  </b><br>RW<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>RF on/of transition time</b><br>RW<br>0<br>00: Tari determined<br>01: 100ms<br>10: 200ms<br>11: 400ms]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>RF on/of transition time</b><br>RW<br>0<br>00: Tari determined<br>01: 100ms<br>10: 200ms<br>11: 400ms]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="22-2" >
+            <name>PLL R, A/B divider main register.</name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>0<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>0<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="2" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>0<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="3" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>0<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>PLL reference divider</b><br>RW<br>1<br>000: 500kHz<br>001: 250kHz<br>100: 200kHz<br>010: 125kHz  <br>101: 100kHz<br>110: 50kHz<br>111: 25kHz]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>PLL reference divider</b><br>RW<br>1<br>000: 500kHz<br>001: 250kHz<br>100: 200kHz<br>010: 125kHz  <br>101: 100kHz<br>110: 50kHz<br>111: 25kHz]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>PLL reference divider</b><br>RW<br>1<br>000: 500kHz<br>001: 250kHz<br>100: 200kHz<br>010: 125kHz  <br>101: 100kHz<br>110: 50kHz<br>111: 25kHz]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Increase internal PA bias</b><br>RW<br>0<br>Increase two times (]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="22-1" >
+            <name>PLL R, A/B divider main register</name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>0<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>0<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="2" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>Hex D8<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="3" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>Hex D8<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="4" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>Hex D8<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="5" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>Hex D8<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="6" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>Hex D8<br>Prescaler 32/33]]></tooltip>
+                </bit>
+                <bit no="7" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>Hex D8<br>Prescaler 32/33]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="22-0" >
+            <name>PLL R, A/B divider main register </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>Hex 4F<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>Hex 4F<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>Hex 4F<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="3" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>Hex 4F<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="4" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>Hex 4F<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="5" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>Hex 4F<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="6" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>Hex 4F<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+                <bit no="7" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>Hex 4F<br><br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="23-2" >
+            <name>PLL A/B divider auxiliary register </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>1<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>1<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="2" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>1<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="3" ro="1">
+                    <tooltip><![CDATA[<b>PLL main divider</b><br>RW<br>1<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="4" >
+                    <tooltip><![CDATA[<b>Enable divider and prescaler</b><br>RW<br>0<br>1: In case internal PLL drives external VCO.]]></tooltip>
+                </bit>
+                <bit no="5" >
+                    <tooltip><![CDATA[<b>Enable external RF input EXT_IN</b><br>RW<br>0<br>0: Internal VCO     1: External RF source is used.]]></tooltip>
+                </bit>
+                <bit no="6" >
+                    <tooltip><![CDATA[<b>VCO signal adjustment</b><br>RW<br>0<br>0: normal VCO connection  1: direct VCO connection<br>not in v2.9]]></tooltip>
+                </bit>
+                <bit no="7" >
+                    <tooltip><![CDATA[<b>Increase internal PA bias</b><br>RW<br>0<br>Increase four times (v2.9, v3?3.8)]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="23-1" >
+            <name>PLL R, A/B divider main register </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>00<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="2" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 42<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="3" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 42<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="4" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 42<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="5" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 42<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="6" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 42<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+                <bit no="7" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 42<br>Prescaler 32/33,]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="22-0" >
+            <name>PLL R, A/B divider main register </name>
+            <tooltip/>
+          <control addmask="8">
+            <ctrlregister>28</ctrlregister>
+            <ctrlbits>0:2</ctrlbits>
+          </control>
+          <bits>
+                <bit no="0" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 46<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="1" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 46<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="2" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 46<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="3" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 46<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="4" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 46<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="5" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 46<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="6" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 46<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+                <bit no="7" ro="1">
+                    <tooltip><![CDATA[<b>Reserved</b><br>RW<br>Hex 46<br>dividing ratio N=B*32+A*33, proposed A/B ratio: 1/3?3.]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="23" >
+            <name>DAC control register</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>ADC readout</b><br>R<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>ADC readout</b><br>R<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>ADC readout</b><br>R<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>ADC readout</b><br>R<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>ADC readout</b><br>R<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>ADC readout</b><br>R<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>ADC readout</b><br>R<br>0<br>]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>ADC readout</b><br>R<br>0<br>]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="24" >
+            <name>RX length 1</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>RX length Bit 8 and 9</b><br>R<br>0<br>RX length Bit 8 and 9]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>RX length Bit 8 and 9</b><br>R<br>0<br>RX length Bit 8 and 9]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>R<br>0]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>R<br>0]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>R<br>0]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>Reserved</b><br>R<br>0]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>Direct FIFO and 2nd byte IRQ</b><br>R<br>0<br>All bytes including CRC are transferred to FIFO, irq_header is changed to irq_2ndbyte, irq_err3 is changed to irq_RX_finished. For PC+EPC reception  v3.7.]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>Receiving without CRC</b><br>R<br>0<br>Temporary receiving without CRC. Valid for a single reception.]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="25" >
+            <name>RX length 2 </name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>RX length</b><br>0<br><br>RX length Bit 7 to 0 Taht Bits will be set at run time]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>RX length</b><br>0<br><br>RX length Bit 7 to 0 Taht Bits will be set at run time]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>RX length</b><br>0<br><br>RX length Bit 7 to 0 Taht Bits will be set at run time]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>RX length</b><br>0<br><br>RX length Bit 7 to 0 Taht Bits will be set at run time]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>RX length</b><br>0<br><br>RX length Bit 7 to 0 Taht Bits will be set at run time]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>RX length</b><br>0<br><br>RX length Bit 7 to 0 Taht Bits will be set at run time]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>RX length</b><br>0<br><br>RX length Bit 7 to 0 Taht Bits will be set at run time]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>RX length</b><br>0<br><br>RX length Bit 7 to 0 Taht Bits will be set at run time]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="26" >
+            <name>FIFO status</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>FIFO bytes fb[4]</b><br>R<br>0<br>How many bytes loaded in FIFO were not read out yet]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>FIFO bytes fb[4]</b><br>R<br>0<br>How many bytes loaded in FIFO were not read out yet]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>FIFO bytes fb[4]</b><br>R<br>0<br>How many bytes loaded in FIFO were not read out yet]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>FIFO bytes fb[4]</b><br>R<br>0<br>How many bytes loaded in FIFO were not read out yet]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>FIFO bytes fb[4]</b><br>R<br>0<br>How many bytes loaded in FIFO were not read out yet]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>FIFO overflow error</b><br>R<br>0<br>Too many data were written to FIFO]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>Low FIFO level</b><br>R<br>0<br>Indicates that only 6 bytes are left in FIFO (for TX)]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>High FIFO level</b><br>R<br>0<br>Indicates that 18 bytes are in FIFO already (for RX)]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="27" >
+            <name>TX length byte1</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte bit 7 to Bit 4</b><br>0<br><br>Middle nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte bit 7 to Bit 4</b><br>0<br><br>Middle nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte bit 7 to Bit 4</b><br>0<br><br>Middle nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte bit 7 to Bit 4</b><br>0<br><br>Middle nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte Bitt 11 to Bit 8</b><br>0<br><br>High nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte Bitt 11 to Bit 8</b><br>0<br><br>High nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte Bitt 11 to Bit 8</b><br>0<br><br>High nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte Bitt 11 to Bit 8</b><br>0<br><br>High nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+        <reg address="28" >
+            <name>TX length byte2</name>
+            <tooltip/>
+            <bits>
+                <bit no="0" ro="1" >
+                    <tooltip><![CDATA[<b>broken byte flag</b><br>0<br><br>1: indicates that last byte is not complete 8 bit wide]]></tooltip>
+                </bit>
+                <bit no="1" ro="1" >
+                    <tooltip><![CDATA[<b>broken byte number of bits</b><br>bb[2]<br>0<br>Number of bits in the last (broken) byte to be transmitted or number of bits that are valid in the last (broken) received byte. It is taken into account only when broken byte flag is set]]></tooltip>
+                </bit>
+                <bit no="2" ro="1" >
+                    <tooltip><![CDATA[<b>broken byte number of bits</b><br>bb[2]<br>0<br>Number of bits in the last (broken) byte to be transmitted or number of bits that are valid in the last (broken) received byte. It is taken into account only when broken byte flag is set]]></tooltip>
+                </bit>
+                <bit no="3" ro="1" >
+                    <tooltip><![CDATA[<b>broken byte number of bits</b><br>bb[2]<br>0<br>Number of bits in the last (broken) byte to be transmitted or number of bits that are valid in the last (broken) received byte. It is taken into account only when broken byte flag is set]]></tooltip>
+                </bit>
+                <bit no="4" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte bit 3 to Bit 0</b><br>0<br><br>Low nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="5" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte bit 3 to Bit 0</b><br>0<br><br>Low nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="6" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte bit 3 to Bit 0</b><br>0<br><br>Low nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+                <bit no="7" ro="1" >
+                    <tooltip><![CDATA[<b>number of complete byte bit 3 to Bit 0</b><br>0<br><br>Low nibble of complete bytes to be transmitted or<br>received]]></tooltip>
+                </bit>
+            </bits>
+        </reg>
+    </registers>
+</register_map>

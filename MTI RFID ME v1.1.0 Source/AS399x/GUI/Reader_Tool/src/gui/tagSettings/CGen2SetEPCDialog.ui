@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CGen2SetEPCDialogClass</class>
+ <widget class="QDialog" name="CGen2SetEPCDialogClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>302</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gen2 - Set EPC</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../../Qrfe/images/qrfe.qrc">
+    <normaloff>:/ams logos/mtiWindowIcon</normaloff>:/ams logos/mtiWindowIcon</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_6">
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="../../../Qrfe/images/qrfe.qrc">:/window images/keyImage</pixmap>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="3">
+    <widget class="QLabel" name="label_5">
+     <property name="font">
+      <font>
+       <family>Tahoma</family>
+       <pointsize>20</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Set EPC</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="7">
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>EPC</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0" colspan="2">
+    <widget class="QLabel" name="label_4">
+     <property name="text">
+      <string>Current Access Password</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2" colspan="2">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>65</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="5" column="4">
+    <widget class="QLineEdit" name="currentPasswordLineEdit">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="inputMask">
+      <string>HH-HH-HH-HH; </string>
+     </property>
+     <property name="text">
+      <string>00-00-00-00</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="6">
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>64</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="label_7">
+     <property name="text">
+      <string>New EPC</string>
+     </property>
+    </widget>
+   </item>
+   <item row="8" column="0" colspan="7">
+    <widget class="QTextEdit" name="infoEdit">
+     <property name="maximumSize">
+      <size>
+       <width>16777215</width>
+       <height>70</height>
+      </size>
+     </property>
+     <property name="font">
+      <font>
+       <family>Lucida Console</family>
+      </font>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="4" colspan="3">
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="4">
+    <widget class="QSpinBox" name="lengthBox">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>27</number>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>EPC Length</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="5">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Words</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="5">
+    <widget class="QLabel" name="label_8">
+     <property name="text">
+      <string>Words</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2" colspan="4">
+    <widget class="QLineEdit" name="newEpcEdit">
+     <property name="minimumSize">
+      <size>
+       <width>220</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="inputMask">
+      <string>HH-HH-HH-HH-HH-HH-HH-HH-HH-HH-HH-HH; </string>
+     </property>
+     <property name="text">
+      <string>00-00-00-00-00-00-00-00-00-00-00-00</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="6">
+    <widget class="QLabel" name="label_9">
+     <property name="text">
+      <string>Words</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2" colspan="4">
+    <widget class="QLineEdit" name="tagIdEdit">
+     <property name="font">
+      <font>
+       <family>Tahoma</family>
+       <pointsize>9</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+  <include location="../../../Qrfe/images/qrfe.qrc"/>
+ </resources>
+ <connections/>
+</ui>

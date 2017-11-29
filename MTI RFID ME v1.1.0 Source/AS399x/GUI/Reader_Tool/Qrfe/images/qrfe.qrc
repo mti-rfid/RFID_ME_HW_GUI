@@ -1,0 +1,33 @@
+<RCC>
+  <qresource prefix="/button icons">
+    <file alias="addIcon">22x22_add.png</file>
+    <file alias="clearIcon">22x22_clear.png</file>
+    <file alias="handleIcon">22x22_run.png</file>
+    <file alias="settingsIcon">32x32_settings.png</file>
+    <file alias="startIcon">32x32_start.png</file>
+    <file alias="stopIcon">32x32_stop.png</file>
+    <file alias="advancedSettingsIcon">32x32_system.png</file>
+  </qresource>
+  <qresource prefix="/tree widget icons">
+    <file alias="information">16x16_info.png</file>
+    <file alias="passiveTag">20x20_passive_tag.png</file>
+    <file alias="activeReader">40x29_active_reader.png</file>
+    <file alias="passiveReader">50x36_passive_reader.png</file>
+    <file alias="activeTag">50x44_active_tag.png</file>
+  </qresource>
+  <qresource prefix="/window images">
+    <file alias="keyImage">48x48_key.png</file>
+    <file alias="settingsImage">48x48_settings.png</file>
+    <file alias="advancedSettingsImage">48x48_system.png</file>
+    <file alias="readerToolImage">64x64_tool.png</file>
+  </qresource>
+  <qresource prefix="/ams logos">
+    <file alias="mtiAbout">mtiAbout.gif</file>
+    <!--Mod by Wayne for changing initial and banner logo, 2014/07/02-->
+    <!--<file alias="mtiBanner">mtiBanner.gif</file>-->
+    <file alias="mtiBanner">mtiBanner.png</file>
+    <!--End by Wayne for changing initial and banner logo, 2014/07/02-->
+    <file alias="mtiWindowIcon">mtiLogo.ico</file>
+    <file alias="mtiRfidLogo">mtiRfidLogo.png</file>
+  </qresource>
+</RCC>

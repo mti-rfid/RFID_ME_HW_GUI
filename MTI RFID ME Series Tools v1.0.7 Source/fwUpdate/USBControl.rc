@@ -1,0 +1,351 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (Taiwan) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHT)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_TRADITIONAL
+#pragma code_page(950)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\USBControl.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\USBControl.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG1_BASIC DIALOGEX 0, 0, 417, 182
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LIST1_MEMO,7,138,403,14,ES_READONLY,WS_EX_DLGMODALFRAME
+    PUSHBUTTON      "Browse",IDC_BUTTON1_BOWSER,278,95,125,14
+    PUSHBUTTON      "Update",IDC_BUTTON2_UPDATE,278,116,125,14
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,57,117,211,13
+    LTEXT           "SW Version:",IDC_STATIC,14,65,42,14,SS_CENTERIMAGE
+    LTEXT           "Progress :",IDC_STATIC,14,116,36,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT2_FW_VERSION,69,50,201,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "State",IDC_STATIC,278,35,132,25
+    CTEXT           "Disconnected",IDC_STATIC_LINK_STATE,299,43,83,13,SS_CENTERIMAGE
+    GROUPBOX        "Information",IDC_STATIC,7,7,403,80
+    LTEXT           "Path        :",IDC_STATIC,14,98,35,8
+    EDITTEXT        IDC_EDIT3_PATH,57,96,211,14,ES_AUTOHSCROLL,WS_EX_RTLREADING
+    LTEXT           "FW Version:",IDC_STATIC,14,49,42,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT1_SW_VERSION,69,66,201,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Update",IDC_STATIC,7,86,403,50
+    COMBOBOX        IDC_COMBO1_slePort,279,17,63,102,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Open",IDC_BUTTON1_Open,353,16,50,14
+    LTEXT           "Model Name:",IDC_STATIC,14,17,42,14
+    EDITTEXT        IDC_EDIT2_ModelName,69,15,201,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Serial Number:",IDC_STATIC,14,33,48,13
+    EDITTEXT        IDC_EDIT3_SerialNumber,69,33,201,14,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DIALOG2_ADVANCE DIALOGEX 0, 0, 416, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CENTER | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LIST1_MEMO,7,141,402,80,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Clear",IDC_BUTTON4_CLEAR,359,225,50,14
+    PUSHBUTTON      "Browse",IDC_BUTTON1_BOWSER,279,78,123,14
+    LTEXT           "SW Version:",IDC_STATIC,14,17,42,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT2_FW_VERSION,59,42,211,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "State",IDC_STATIC,279,35,130,25
+    CTEXT           "Disconnected",IDC_STATIC_LINK_STATE,297,43,82,14,SS_CENTERIMAGE
+    GROUPBOX        "Information",IDC_STATIC,7,3,402,63
+    LTEXT           "Path         :",IDC_STATIC,14,79,38,8
+    EDITTEXT        IDC_EDIT3_PATH,57,77,211,14,ES_AUTOHSCROLL,WS_EX_RTLREADING
+    LTEXT           "FW Version:",IDC_STATIC,14,43,42,14,SS_CENTERIMAGE
+    EDITTEXT        IDC_EDIT1_SW_VERSION,59,17,211,14,ES_AUTOHSCROLL | ES_READONLY
+    GROUPBOX        "Update",IDC_STATIC,7,67,402,70
+    PUSHBUTTON      "Send",IDC_BUTTON2_SEND,279,97,123,14
+    COMBOBOX        IDC_COMBO1_CMD,57,98,211,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Command :",IDC_STATIC,14,100,36,8
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",WS_BORDER,57,118,211,14
+    LTEXT           "Progress   :",IDC_STATIC,14,121,41,8
+    COMBOBOX        IDC_COMBO1_slePort2,279,17,63,114,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Open",IDC_BUTTON1_Open,353,16,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG1_BASIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 410
+        VERTGUIDE, 14
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_DIALOG2_ADVANCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 409
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_PNG1                PNG                     "Image\\mtiBanner.png"
+#endif    // Chinese (Taiwan) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 248, 263
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CTEXT           "MTI Reader USBControl\nVersion 1.0.0\nCopyright(C) 2010 MTI",IDC_STATIC_ABOUT_1,7,17,234,44,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,96,242,50,14,WS_GROUP
+    CTEXT           "No.1 Innovation Road II, Hsinchu Science Park,\nHsinchu 300, Taiwan, R.O.C.\nPhone: +886-3-577 - 3335 \nhttp://www.mti.com.tw",IDC_STATIC_ABOUT_2,30,126,196,36
+    CTEXT           "Information",IDC_STATIC_ABOUT_3,24,183,203,51
+END
+
+IDD_USBCONTROL_DIALOG DIALOGEX 0, 0, 440, 347
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "USBControl"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CTEXT           "MTI RFID ME Series\nFW Update",IDC_STATIC_LOGO_CAPTION,7,11,143,48
+    CONTROL         "",IDC_TAB1,"SysTabControl32",TCS_FIXEDWIDTH,7,49,422,172
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 241
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_USBCONTROL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 429
+        VERTGUIDE, 13
+        VERTGUIDE, 58
+        VERTGUIDE, 413
+        TOPMARGIN, 11
+        BOTTOMMARGIN, 339
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "MTI"
+            VALUE "FileDescription", "USB Update Firmware Tool"
+            VALUE "FileVersion", "1.0"
+            VALUE "InternalName", "USBControl.exe"
+            VALUE "LegalCopyright", "TODO: (c) <MTI >.  All rights reserved."
+            VALUE "OriginalFilename", "USBControl.exe"
+            VALUE "ProductVersion", "1, 0, 0, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About"
+    STR_ERR_NO_USB          "Error: No USB device"
+    STR_ERR_BUSY            "Error: Communication is Busy"
+    STR_ERR_TIMEOUT         "Error: Timeout"
+    STR_ACT_UPDATE          "Update"
+    STR_ERR_CMD_ZERO        "Error: Command is zero"
+    STR_ERR_NO_DATA         "Error: No data"
+    STR_ERR_WT_FAIL         "Error: Write fail. Maybe data error or mode error"
+    STR_ERR_CAN_NOT_OPEN_IMAGE "Error: Can't not open the Image"
+    STR_ERR_FILE_SIZE_ZERO  "Error: The size of File is ZERO"
+    STR_ERR_CAN_NOT_GET_IMAGE_SIZE "Error: Can't not get the file size"
+END
+
+STRINGTABLE 
+BEGIN
+    STR_ACT_CONNECTED       "Connected"
+    STR_ACT_DISCONNECTED    "Disconnected"
+    STR_ACT_SELECT_DIRECTORY "Please select the directory"
+END
+
+STRINGTABLE 
+BEGIN
+    STR_ERR_CODE_INVALID_LENGTH """Invalid data length"""
+    STR_ERR_CODE_INVALID_PARAMETER """Invalid parameter"""
+    STR_ERR_CODE_WRONG_PROCEDURE """Wrong procedure"""
+END
+
+STRINGTABLE 
+BEGIN
+    STR_ERR_CODE_OVER_RANGE """Over range"""
+    STR_ERR_CODE_SYSTEM_MODULE_FAILLURE """System module faillure"""
+    STR_ERR_CODE_NO_DEFINE  """No define"""
+END
+
+STRINGTABLE 
+BEGIN
+    STR_FILE_PATH_IMAGE     ".\\image\\mtiRfidLogo.png"
+END
+
+STRINGTABLE 
+BEGIN
+    STR_INFOR_TEXT_ABOUT    "MTI Group Proprietary Information\n\nAny unauthorized use, duplication, reproduction, or disclosure of this document may be considered as infringement of MTI Groups intellectual property rights, the infringer may be accused and liable applicable legal penalties"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\USBControl.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VisualStudioToolFile
+	Name="QT"
+	Version="8.00"
+	>
+	<Rules>
+		<CustomBuildRule
+			Name="UIC"
+			DisplayName="UICing file $(InputDir)\$(InputName).ui ..."
+			CommandLine="$(QTDIR)/bin/uic.exe $(InputDir)\$(InputName).ui -o $(ProjectDir)\generated\include\ui_$(InputName).h"
+			Outputs="$(ProjectDir)\generated\include\ui_$(InputName).h"
+			AdditionalDependencies="uic.exe"
+			FileExtensions="*.ui"
+			>
+			<Properties>
+			</Properties>
+		</CustomBuildRule>
+		<CustomBuildRule
+			Name="MOC"
+			DisplayName="MOCing file $(InputDir)\$(InputName).hxx ..."
+			CommandLine="$(QTDIR)/bin/moc.exe -DUNICODE -DWIN32 -DQT_THREAD_SUPPORT -DQT_CORE_LIB -DQT_GUI_LIB -DQT_XML_LIB  -I&quot;$(QTDIR)\include\.&quot; &quot;$(InputDir)\$(InputName).hxx&quot; -o &quot;$(ProjectDir)\generated\src\moc_$(InputName).cpp&quot;"
+			Outputs="&quot;$(ProjectDir)\generated\src\moc_$(InputName).cpp&quot;"
+			AdditionalDependencies="moc.exe"
+			FileExtensions="*.hxx"
+			>
+			<Properties>
+			</Properties>
+		</CustomBuildRule>
+		<CustomBuildRule
+			Name="RCC"
+			DisplayName="RCCing file $(InputDir)\$(InputName).qrc ..."
+			CommandLine="$(QTDIR)/bin/rcc.exe $(InputDir)\$(InputName).qrc -o $(ProjectDir)\generated\src\qrc_$(InputName).cpp"
+			Outputs="$(ProjectDir)\generated\src\qrc_$(InputName).cpp"
+			AdditionalDependencies="rcc.exe"
+			FileExtensions="*.qrc"
+			>
+			<Properties>
+			</Properties>
+		</CustomBuildRule>
+	</Rules>
+</VisualStudioToolFile>

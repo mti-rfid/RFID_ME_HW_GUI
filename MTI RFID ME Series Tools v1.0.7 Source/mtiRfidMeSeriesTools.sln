@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FwUpdate", "fwUpdate\USBControl.vcproj", "{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}"
+	ProjectSection(ProjectDependencies) = postProject
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95} = {78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Transfer", "transfer\Transfer.vcproj", "{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "setup\Setup.vdproj", "{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D022A38D-84E9-4288-9A62-76837425B030} = {D022A38D-84E9-4288-9A62-76837425B030}
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95} = {78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OemUpdate", "oemCfgUpdate\OemTool.vcproj", "{D022A38D-84E9-4288-9A62-76837425B030}"
+	ProjectSection(ProjectDependencies) = postProject
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95} = {78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugX64|Win32 = DebugX64|Win32
+		Release|Win32 = Release|Win32
+		ReleaseX64|Win32 = ReleaseX64|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}.Debug|Win32.Build.0 = Debug|Win32
+		{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}.DebugX64|Win32.ActiveCfg = Debug|Win32
+		{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}.DebugX64|Win32.Build.0 = Debug|Win32
+		{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}.Release|Win32.ActiveCfg = Release|Win32
+		{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}.Release|Win32.Build.0 = Release|Win32
+		{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}.ReleaseX64|Win32.ActiveCfg = Release|Win32
+		{A0AE6E2B-0B4B-42CF-A46A-C4D5CBAEA722}.ReleaseX64|Win32.Build.0 = Release|Win32
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}.Debug|Win32.ActiveCfg = Debug|Win32
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}.Debug|Win32.Build.0 = Debug|Win32
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}.DebugX64|Win32.ActiveCfg = DebugX64|Win32
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}.DebugX64|Win32.Build.0 = DebugX64|Win32
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}.Release|Win32.ActiveCfg = Release|Win32
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}.Release|Win32.Build.0 = Release|Win32
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}.ReleaseX64|Win32.ActiveCfg = ReleaseX64|Win32
+		{78D2E4A4-0B9C-4B59-9ACF-3117B0C1EB95}.ReleaseX64|Win32.Build.0 = ReleaseX64|Win32
+		{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}.Debug|Win32.ActiveCfg = Debug
+		{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}.Debug|Win32.Build.0 = Debug
+		{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}.DebugX64|Win32.ActiveCfg = Debug
+		{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}.DebugX64|Win32.Build.0 = Debug
+		{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}.Release|Win32.ActiveCfg = Release
+		{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}.Release|Win32.Build.0 = Release
+		{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}.ReleaseX64|Win32.ActiveCfg = Release
+		{5C70EDB3-AFC3-4DE1-A852-D2C2A5C9197E}.ReleaseX64|Win32.Build.0 = Release
+		{D022A38D-84E9-4288-9A62-76837425B030}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D022A38D-84E9-4288-9A62-76837425B030}.Debug|Win32.Build.0 = Debug|Win32
+		{D022A38D-84E9-4288-9A62-76837425B030}.DebugX64|Win32.ActiveCfg = Debug|Win32
+		{D022A38D-84E9-4288-9A62-76837425B030}.DebugX64|Win32.Build.0 = Debug|Win32
+		{D022A38D-84E9-4288-9A62-76837425B030}.Release|Win32.ActiveCfg = Release|Win32
+		{D022A38D-84E9-4288-9A62-76837425B030}.Release|Win32.Build.0 = Release|Win32
+		{D022A38D-84E9-4288-9A62-76837425B030}.ReleaseX64|Win32.ActiveCfg = Release|Win32
+		{D022A38D-84E9-4288-9A62-76837425B030}.ReleaseX64|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

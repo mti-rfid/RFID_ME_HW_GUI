@@ -1,0 +1,5 @@
+33-33-33-33-33-33-33-33-33-33-33-33		13
+
+Tag Numbers = 1
+Total Counts = 13
+Reading Speed = 4.23039
