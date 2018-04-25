@@ -1,4 +1,0 @@
-
-Tag Numbers = 0
-Total Counts = 0
-Reading Rate = 0
